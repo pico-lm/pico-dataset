@@ -1,14 +1,30 @@
-## Pico Dataset 
+## Setup Instructions
 
-📔 A repository storing all of the script used to generate the Pico datasets (both for training and inference). The data used is just a re-processed version of the OLMO dataset. 
+### Prerequisites
+- Hugging Face account with API token
+- Python environment with dependencies installed (see `pyproject.toml`)
 
-The datasets are hosted on the [Pico huggingface](https://huggingface.co/datasets/pico-lm/pretokenized-dolma) repo. 
+### Steps
 
-The setup is fairly straight forward: 
+1. **Configure Environment**
+   - Create a `.env` file in the root directory
+   - Add your Hugging Face token: `HF_TOKEN=your_token_here`
 
-Step 1. Create a `.env` file with the right `HF_TOKEN=...` 
-Step 2. Run `download_data.sh`
-Step 3. Run `create_idx_prepared_dataset.py`; to do this in a slurm environment just use the `create_prepared_dataset.sbatch` script. 
-Step 4. Wait forever or buy a million CPUs. 
+2. **Download Data**
+   ```bash
+   ./download_data.sh
+   ```
 
-(Optional Step). Run throughout the `create_eval_batch.ipynb` to create the inference eval batch.
+3. **Prepare Dataset**
+   - For local execution:
+     ```bash
+     python create_idx_prepared_dataset.py
+     ```
+   - For SLURM environments:
+     ```bash
+     sbatch create_prepared_dataset.sbatch
+     ```
+   > ⚠️ Note: This process is computationally intensive and may take considerable time.
+
+4. **Optional: Create Evaluation Batch**
+   - Open and run `create_eval_batch.ipynb` to generate inference evaluation data
