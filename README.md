@@ -18,13 +18,14 @@
 3. **Prepare Dataset**
    - For local execution:
      ```bash
-     python create_idx_prepared_dataset.py
+     python create_dolma_dataset.py
      ```
    - For SLURM environments:
      ```bash
-     sbatch create_prepared_dataset.sbatch
+     # Replace N with a shard index (0-99)
+     sbatch create_prepared_dataset.sbatch N
      ```
-   > ⚠️ Note: This process is computationally intensive and may take considerable time.
+   > ⚠️ Note: The shard index must be an integer between 0 and 99, representing which portion of the dataset to process.
 
 4. **Optional: Create Evaluation Batch**
-   - Open and run `create_eval_batch.ipynb` to generate inference evaluation data
+   - Open and run `create_paloma_dataset.ipynb` to generate inference evaluation data
