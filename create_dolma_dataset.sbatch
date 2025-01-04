@@ -21,4 +21,4 @@ cd ..
 scontrol update job $SLURM_JOB_ID name=dolma_dataset_job_idx$1
 
 echo "Starting shard $1"
-python create_idx_prepared_dataset.py --idx $1 --num_workers ${2:-14}
+python create_dolma_dataset.py --idx $1 --num_workers ${2:-14}

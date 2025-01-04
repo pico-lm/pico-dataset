@@ -1,6 +1,9 @@
 """
 Create a prepared dataset: a dataset from DOLMA that has been pre-tokenized, with documents separated 
 by boundary markers, and randomly shuffled.
+
+NOTE: Creates dataset in shards of 204800000 examples. With a total of 100 shards, you would need
+to run this script 100 times to create a full dataset.
 """
 
 import os

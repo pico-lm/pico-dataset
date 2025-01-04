@@ -13,6 +13,9 @@ transformers = "^4.36.0"
 click = "^8.1.0"
 logging = "^0.4.9.6"
 
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api" 
