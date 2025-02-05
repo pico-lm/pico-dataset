@@ -32,7 +32,7 @@ HF_REPO = "pico-lm/pretokenized-dolma"
 SEQ_LEN = 2048 + 1  # Sequence length (include +1 for right-shifting)
 
 # Load HF Token from .env file
-with open("pico/.env", "r") as file:
+with open(".env", "r") as file:
     for line in file:
         if line.startswith("HF_TOKEN"):
             HF_TOKEN = line.split("=")[1].strip()

@@ -6,9 +6,9 @@ authors = ["Richard Diehl Martinez<richarddiehl@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-datasets = "^2.16.0"
-huggingface-hub = "^0.20.0"
+python = "^3.10"
+huggingface-hub = {extras = ["cli"], version = "^0.25.1"}
+datasets = "^3.2.0"
 transformers = "^4.36.0"
 click = "^8.1.0"
 logging = "^0.4.9.6"

@@ -29,3 +29,7 @@
 
 4. **Optional: Create Evaluation Batch**
    - Open and run `create_paloma_dataset.ipynb` to generate inference evaluation data
+
+5. **Optional: Further shard Dataset**
+   - If you'd like to shard the dataest into smaller shards (e.g. 1,000/10,000 shards), you can run the script in `shard_dataset.ipynb`
+   > Note that this will create a second version of the dataset, what we did is we ran this script to generate 10,000 shards and then deleted the original dataset
