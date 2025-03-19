@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "pico-dataset"
-version = "0.1.0"
-description = "Dataset preparation tools for PICO"
-authors = ["Richard Diehl Martinez<richarddiehl@gmail.com>"]
+version = "1.0.0"
+description = "Dataset preparation tools for pico"
+authors = ["Richard Diehl Martinez<richard@picolm.io"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
